@@ -1,7 +1,6 @@
 @mixin btn-col($col) {
     background-color: $col;
-    &:hover {
-        transition: background-color 3s ease-in;
-        background-color: lighten($color: $col, $amount: 15%); 
+    &:hover { 
+        background-color: lighten($col, 15%);
     }
 }
