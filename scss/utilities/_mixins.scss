@@ -2,6 +2,6 @@
     background-color: $col;
     &:hover {
         transition: background-color 3s ease-in;
-        background-color: lighten($color: $col, $amount: 15%);
+        background-color: lighten($color: $col, $amount: 15%); 
     }
 }
