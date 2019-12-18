@@ -10,4 +10,13 @@ $warning: #fd7856;
 
 // Sizes --------------
 $gutter: 10px;
-$breakpoint-m: 768px;
+$tablet: 768px;
+
+// Maps --------------
+$button-colors: (
+  default: $secondary,
+  error: $error,
+  info: $info,
+  success: $success,
+  warning: $warning
+);
