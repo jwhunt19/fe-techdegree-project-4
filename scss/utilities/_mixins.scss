@@ -1,6 +1,16 @@
-@mixin btn-col($col) {
-    background-color: $col;
-    &:hover { 
-        background-color: lighten($col, 15%);
+@mixin btn-col($map) {
+    @each $class, $color in $map {
+      &.#{$class} {
+        background-color: $color;
+        &:hover {
+          background-color: lighten($color, 15%);
+        }
+      }
+    }
+  }
+
+@mixin media-q($width) {
+    @media (min-width: $width) {
+        @content;
     }
 }
