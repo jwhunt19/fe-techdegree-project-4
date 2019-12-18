@@ -5,12 +5,29 @@
 
 .container {
     padding: 0 $gutter;
+    @include media-q($tablet) {
+        max-width: 1400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.centered {
+    @include media-q($tablet) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .row {
     display: flex;
     flex-direction: column;
     padding: 1em $gutter;
+    @include media-q($tablet) {
+        flex-direction: row;
+    }
 }
 
 [class^=col] {
@@ -19,6 +36,26 @@
     min-height: 25px;
     padding: $gutter;
     border-radius: 5px;
+    @include media-q($tablet) {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        align-items: center;
+    }
+    &+& {
+        @include media-q($tablet) {
+            margin-left: 10px;
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        $n:($i*8.33%);
+        @include media-q($tablet) {
+            flex-basis: $n;
+        }
+    }
 }
 
 .theme.col-1 {
