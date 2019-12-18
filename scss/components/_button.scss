@@ -11,24 +11,13 @@
     text-transform: uppercase;
     border-radius: 5px;
     transition: background-color 0.6s ease-out;
+    @include btn-col($button-colors);
+    @include media-q($tablet) {
+        padding: 10px 30px;
+    }
+    &+& {
+        @include media-q($tablet) {
+            margin-left: 10px;
+        }
+    }
   }
-  
-.default {
-    @include btn-col($secondary);
-}
-
-.error {
-    @include btn-col($error);
-}
-
-.info {
-    @include btn-col($info);
-}
-
-.success {
-    @include btn-col($success)
-}
-
-.warning {
-    @include btn-col($warning)
-}
